@@ -81,7 +81,7 @@ const express = require("express");
 const axios = require("axios");
 const Message = require("../schema/MessagesSchema");
 const OPENROUTER_API_KEY =
-  "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";
+  "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";
 const router = express.Router();
 
 // ✅ Ask AI and store both Q&A
