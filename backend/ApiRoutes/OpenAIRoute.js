@@ -74,12 +74,14 @@ router.delete("/deleteChat", async (req, res) => {
 });
 module.exports = router;
  */
+
+/*  with router */
+
 const express = require("express");
 const axios = require("axios");
 const Message = require("../schema/MessagesSchema");
 const OPENROUTER_API_KEY =
-  "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";
-
+  "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";
 const router = express.Router();
 
 // ✅ Ask AI and store both Q&A
@@ -145,3 +147,10 @@ router.delete("/deleteChat", async (req, res) => {
   }
 });
 module.exports = router;
+
+// routes/chatRoutes.js
+// routes/chatRoutes.js
+// routes/chatRoutes.js
+// routes/chatRoutes.js
+// routes/chatRoutes.js
+// routes/chatRoutes.js
