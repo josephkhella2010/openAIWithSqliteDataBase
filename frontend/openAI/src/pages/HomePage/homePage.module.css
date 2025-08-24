@@ -1,0 +1,268 @@
+.HomePageWrapper {
+  position: relative;
+  min-height: 100dvh;
+  /*   background-color: cyan;
+ */
+}
+.HomePageTop {
+  /*   background-color: coral;
+ */
+  padding-bottom: 200px; /* 👈 extra space so last message is visible above input */
+  overflow: auto;
+  height: 100dvh;
+}
+.topSectionContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid rgb(153, 153, 153);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logoSection {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoSection img {
+  width: 90px;
+  height: 90%;
+}
+.textLogo {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.textLogo p:nth-child(2) {
+  color: red;
+}
+
+/*  */
+.startConversationContainer {
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.startConversationSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.startConversationIcon {
+  color: rgb(97, 97, 97);
+
+  font-size: 70px;
+}
+.startConversationSection p:nth-of-type(1) {
+  color: rgb(97, 97, 97);
+  font-size: 20px;
+}
+.startConversationSection p:nth-of-type(2) {
+  color: rgb(149, 149, 149);
+  font-size: 20px;
+}
+
+/*  */
+
+/* ai messages */
+.aiMessagesContainer {
+  padding: 20px;
+}
+.aiMessagesSection {
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+}
+.aiMessagesSection img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.aiMessagesSection {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*  */
+
+/* user message */
+.UserMessageContainer {
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+}
+.UserMessageSection {
+  padding: 20px;
+  width: 60%;
+  display: flex;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.UserMessageSection img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(253, 253, 253);
+  padding: 2px;
+}
+.UserMessageSection {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: capitalize;
+}
+/*  */
+
+/* user input */
+.UserInputContainer {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.UserInputSection {
+  /*   background-color: orange;
+ */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.UserInputSection input {
+  border: 1px solid black;
+  height: 70px;
+  width: 60%;
+  border-radius: 40px;
+  padding: 10px;
+  text-transform: capitalize;
+}
+.UserInputIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(213, 213, 213);
+  padding: 10px;
+  cursor: pointer;
+}
+.userMassegerWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  width: 100%;
+}
+.aiBackground {
+  background-color: rgba(0, 0, 255, 0.896);
+}
+.userBackground {
+  background-color: rgba(192, 10, 10, 0.832);
+}
+.UserMessageOutContainer {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Loading Circle */
+.LoadingCircleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.LoadingCircle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  animation: blink 1.5s infinite ease-in-out;
+}
+
+/* Sequential delays */
+.LoadingCircle:nth-child(1) {
+  animation-delay: 0s;
+}
+.LoadingCircle:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.LoadingCircle:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes blink {
+  0% {
+    transform: translateY(3px);
+    background-color: aqua;
+  }
+  30% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-3px);
+    background-color: transparent;
+  }
+  100% {
+    transform: translateY(3px);
+    background-color: aqua;
+  }
+}
+/*  */
+.createNewChatContainer {
+  /*   background-color: chocolate;
+ */
+  padding: 50px 30px;
+}
+.createNewChatContainer button {
+  padding: 12px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+/*  */
+
+@media screen and (max-width: 850px) {
+  .textLogo {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  .startConversationIcon {
+    font-size: 50px;
+  }
+  .startConversationSection p:nth-of-type(1) {
+    font-size: 15px;
+  }
+  .startConversationSection p:nth-of-type(2) {
+    font-size: 15px;
+  }
+  .aiMessagesSection {
+    width: 90%;
+  }
+  .UserMessageSection,
+  .UserMessageContainer {
+    width: 100%;
+  }
+}
