@@ -149,7 +149,7 @@ export default function HomePage() {
   /*  */
   async function getAnswerFromAI() {
     const response = await axios.post(
-      "https://openaibackend-qx8u.onrender.com/api/postQuestion",
+      "http://localhost:3300/api/postQuestion",
       { AiChat: userSmsInput }
     );
     const responseData = response.data.reply;
@@ -157,9 +157,7 @@ export default function HomePage() {
   }
   async function getMessages() {
     try {
-      const response = await axios.get(
-        "https://openaibackend-qx8u.onrender.com/api/messages"
-      );
+      const response = await axios.get("http://localhost:3300/api/messages");
       const responseData = response.data as MessagesType[]; // ✅ cast to array
 
       dispatch(
@@ -191,7 +189,7 @@ export default function HomePage() {
   async function handleDeleteSms() {
     try {
       const deleteChat = await axios.delete(
-        "https://openaibackend-qx8u.onrender.com/api/deleteChat"
+        "http://localhost:3300/api/deleteChat"
       );
       getMessages();
 
