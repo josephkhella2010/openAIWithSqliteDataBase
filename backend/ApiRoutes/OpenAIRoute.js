@@ -131,6 +131,7 @@ router.get("/messages", async (req, res) => {
     const messages = await Message.findAll();
     res.json(messages);
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: "Failed to fetch messages" });
   }
 });
