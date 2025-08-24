@@ -76,15 +76,11 @@ module.exports = router;
  */
 const express = require("express");
 const axios = require("axios");
-/* const dotenv = require("dotenv");
- */ const Message = require("../schema/MessagesSchema");
+const Message = require("../schema/MessagesSchema");
 const OPENROUTER_API_KEY =
-  "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";
+  "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";
 
-//dotenv.config();
 const router = express.Router();
-
-//const OPENROUTER_API_KEY = process.env.VITE_OPENAI_API_KEY;
 
 // ✅ Ask AI and store both Q&A
 router.post("/postQuestion", async (req, res) => {
