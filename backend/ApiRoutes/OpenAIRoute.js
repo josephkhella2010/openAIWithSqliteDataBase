@@ -78,7 +78,7 @@ const express = require("express");
 const axios = require("axios");
 const Message = require("../schema/MessagesSchema");
 const OPENROUTER_API_KEY =
-  "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";
+  "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";
 
 const router = express.Router();
 
