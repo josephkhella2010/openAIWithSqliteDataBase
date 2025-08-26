@@ -18,7 +18,9 @@ app.listen(PORT, () => {
 import express from "express";
 import cors from "cors";
 import OpenAIRoute from "./ApiRoutes/OpenAIRoute.js";
-const PORT = 3300;
+import dotenv from "dotenv";
+const PORT = process.env.PORT || 3300;
+dotenv.config();
 
 const app = express();
 app.use(cors());

@@ -79,9 +79,11 @@ module.exports = router;
 
 const express = require("express");
 const axios = require("axios");
+const dotenv = require("dotenv");
 const Message = require("../schema/MessagesSchema");
-const OPENROUTER_API_KEY =
-  "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";
+dotenv.config();
+
+const OPENROUTER_API_KEY = process.env.VITE_OPENAI_API_KEY;
 const router = express.Router();
 
 // ✅ Ask AI and store both Q&A
@@ -148,10 +150,3 @@ router.delete("/deleteChat", async (req, res) => {
   }
 });
 module.exports = router;
-
-// routes/chatRoutes.js
-// routes/chatRoutes.js
-// routes/chatRoutes.js
-// routes/chatRoutes.js
-// routes/chatRoutes.js
-// routes/chatRoutes.js
