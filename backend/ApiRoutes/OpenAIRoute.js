@@ -83,7 +83,7 @@ const dotenv = require("dotenv");
 const Message = require("../schema/MessagesSchema");
 dotenv.config();
 
-const OPENROUTER_API_KEY = process.env.VITE_OPENAI_API_KEY;
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 const router = express.Router();
 
 // ✅ Ask AI and store both Q&A
